@@ -1,0 +1,24 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Lab2Master.master.cs" Inherits="Lab2.Lab2Master" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    
+    <form id="form1" runat="server">
+        <asp:Button ID="HomeButton" runat="server" Text="Take Me Home"  OnClick="HomeButton_Click" Visible="false" CausesValidation="false" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Label ID="loggedin" runat="server" Text=" "></asp:Label>
+        <asp:Button ID="SignOutBtn" runat="server" Text="logout" OnClick="SignOutBtn_Click" Visible="false" CausesValidation="false" />
+        <div>
+            <asp:ContentPlaceHolder ID="body" runat="server">
+            </asp:ContentPlaceHolder>
+            <asp:Label ID="UserSingedIn" runat="server" Text="Label" Visible="false"></asp:Label>
+        </div>
+    </form>
+</body>
+</html>
